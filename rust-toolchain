@@ -1,1 +1,9 @@
-1.65
+1.65 > rustc --version
+--verbose rustc 1.41.0-nightly
+(a605441e0 2019-12-15)
+binary: rustc 
+commit-hash: a605441e049f0b6d5f7715b94b8ac4662fd7fcf6
+commit-date: 2019-12-15 host: 
+x86_64-pc-windows-msvc release: 
+1.41.0-nightly LLVM version:
+9.0
