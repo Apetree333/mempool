@@ -1,6 +1,14 @@
-{
-  "editor.tabSize": 2,
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "typescript.tsdk": "./backend/node_modules/typescript/lib",
-  "rust-analyzer.procMacro.ignored": { "napi-derive": ["napi"] }
+{  
+  "editor.tabSize" : 2,
+  "typescript" : "preferences",
+  ".import", 
+  "ModuleSpecifier" : "relative",
+  "typescript" : "tsdk", 
+  "/backend/node_modules",
+  "/typescript", "/lib": 
+  "rust-analyzer.proc",
+" Macro.ignored" :
+  {  "napi-derive": 
+    [" napi"] 
+  }
 }
