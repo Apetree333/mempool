@@ -1,1 +1,37 @@
-npx cypress run --record --key 1d26a451-ed1d-4764-a638-f8e1b15e8de6
+jobs:
+test: 
+# make sure the action works on a clean machine 
+without building
+runs-on: ubuntu-latest
+steps:
+      - uses: actions/checkout@v2
+        with: 
+         - path: "/"
+      - uses: actions/upload-artifact@v3
+        with: 
+          name: output.json  path: "./__tests__/output.json"   
+  download:
+   - runs-on: ubuntu-latest 
+-needs: test
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          path: "/"
+      - uses: actions/download-artifact@v3
+        with: 
+          name: output.json
+          path: "/"
+      - uses: "/"
+        name: run test
+        with:
+     - jsonArtifact:   /home/runner/work/cypress-test-summary/cypress-test-summary/ouput.json'
+  test: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          path: "/"
+      - uses: "/"
+        name: run test
+        with:
+          jsonArtifact: "/__tests__/ouput.json"
